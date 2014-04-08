@@ -1,10 +1,10 @@
-%global commit d28c425853ec6df6698ebbf00ab3440d70e747bf
+%global commit 39c79d19758443b81d7e1df1f017ff977ff85bbb
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
-%global alphatag 20140403git
+%global alphatag 20140408git
 
 Name:		instack-undercloud
 Version:	0
-Release:	0.8.%{alphatag}%{?dist}
+Release:	0.10.%{alphatag}%{?dist}
 Summary:	Installation tools to install an undercloud via instack
 
 Group:		Development/Languages
@@ -18,6 +18,10 @@ Requires:	instack
 Requires:	openstack-tripleo
 Requires:	openstack-tripleo-heat-templates
 Requires:	openstack-tripleo-image-elements
+Requires:	openstack-tuskar
+Requires:	openstack-tuskar-ui
+Requires:	redhat-lsb-core
+Requires:	policycoreutils-python
 
 
 %description
@@ -59,6 +63,13 @@ cp -ar json-files %{buildroot}/%{_datadir}/instack-undercloud
 
 
 %changelog
+* Tue Apr 08 2014 James Slagle <jslagle@redhat.com> 0-0.10.20140408git
+- Build with tito.
+
+* Mon Apr 07 2014 James Slagle <jslagle@redhat.com> 0-0.9.20140407git
+- Add Requires for tuskar, redhat-lsb-core, and policycoreutils-python
+- Bump to latest from git
+
 * Thu Apr 03 2014 James Slagle <jslagle@redhat.com> 0-0.8.20140403git
 - Remove code that depends on updates-testing repo
 
