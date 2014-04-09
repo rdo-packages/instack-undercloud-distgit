@@ -1,6 +1,6 @@
-%global commit 39c79d19758443b81d7e1df1f017ff977ff85bbb
+%global commit 92225b72f14750fb3ae9310880aad398814c5026
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
-%global alphatag 20140408git
+%global alphatag 20140409git
 
 Name:		instack-undercloud
 Version:	0
@@ -63,8 +63,22 @@ cp -ar json-files %{buildroot}/%{_datadir}/instack-undercloud
 
 
 %changelog
+* Wed Apr 09 2014 James Slagle <jslagle@redhat.com> 0-0.10.20140409git
+- Update spec file (jslagle@redhat.com)
+- Update source install script (jslagle@redhat.com)
+- Update instack-virt-setup (james.slagle@gmail.com)
+- removed call to instack-install-dependencies as we are now calling the
+  upstream version (rbrady@redhat.com)
+- updated repo location for image download to publicly accessible
+  fedorapeople.org (rbrady@redhat.com)
+- Add swiftstorage flavor update for tuskar (jslagle@redhat.com)
+- Add explicit installs of openstack-dashboard (jslagle@redhat.com)
+- Install needed python-posix_ipc manually (jslagle@redhat.com)
+- Newer horizon builds are now available (jslagle@redhat.com)
+
 * Tue Apr 08 2014 James Slagle <jslagle@redhat.com> 0-0.10.20140408git
 - Build with tito.
+- Update to remove horizon test builds
 
 * Mon Apr 07 2014 James Slagle <jslagle@redhat.com> 0-0.9.20140407git
 - Add Requires for tuskar, redhat-lsb-core, and policycoreutils-python
