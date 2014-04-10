@@ -1,16 +1,12 @@
-%global commit 92225b72f14750fb3ae9310880aad398814c5026
-%global shortcommit %(c=%{commit}; echo ${c:0:7})
-%global alphatag 20140409git
-
 Name:		instack-undercloud
-Version:	0
-Release:	0.11.%{alphatag}%{?dist}
+Version:	0.0.1
+Release:	1%{?dist}
 Summary:	Installation tools to install an undercloud via instack
 
 Group:		Development/Languages
 License:	ASL 2.0
 URL:		https://github.com/agroup/instack-undercloud
-Source0:	https://github.com/agroup/%{name}/archive/%{name}-%{version}.tar.gz
+Source0:	%{name}-%{version}.tar.gz
 
 BuildArch:	noarch
 
@@ -62,6 +58,10 @@ cp -ar json-files %{buildroot}/%{_datadir}/instack-undercloud
 
 
 %changelog
+* Thu Apr 10 2014 James Slagle <jslagle@redhat.com> 0.0.1-1
+- Update spec to no longer build from git commits (jslagle@redhat.com)
+- Update Building-RPMs.md (james.slagle@gmail.com)
+
 * Wed Apr 09 2014 James Slagle <jslagle@redhat.com> 0-0.10.20140409git
 - Update spec file (jslagle@redhat.com)
 - Update source install script (jslagle@redhat.com)
