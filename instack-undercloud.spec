@@ -1,5 +1,5 @@
 Name:		instack-undercloud
-Version:	0.0.6
+Version:	0.0.9
 Release:	1%{?dist}
 Summary:	Installation tools to install an undercloud via instack
 
@@ -58,6 +58,25 @@ cp -ar json-files %{buildroot}/%{_datadir}/instack-undercloud
 
 
 %changelog
+* Wed Apr 16 2014 Ben Nemec <bnemec@redhat.com> 0.0.9-1
+- No longer specify --port-range-max for icmp security group rule.
+  (jslagle@redhat.com)
+- Update README-source.md (james.slagle@gmail.com)
+- Update README-packages.md (james.slagle@gmail.com)
+- Adds instructions on how to use the rdo staging repository if desired
+  (jslagle@redhat.com)
+- Use mariadb-rdo element in controller image build (jslagle@redhat.com)
+- Make sure yum-utils is always installed (jslagle@redhat.com)
+
+* Tue Apr 15 2014 James Slagle <jslagle@redhat.com> 0.0.8-1
+- Fix array references (jslagle@redhat.com)
+
+* Tue Apr 15 2014 James Slagle <jslagle@redhat.com> 0.0.7-1
+- Delete initial flavors (jslagle@redhat.com)
+- os-*-config packages now pushed to stable (jslagle@redhat.com)
+- Make PM vars arrays so they can be indexed (jslagle@redhat.com)
+- Load deploy images in instack-prepare-for-overcloud, but delete them before
+  running setup-baremetal in the deploy scripts (jslagle@redhat.com)
 * Tue Apr 15 2014 James Slagle <jslagle@redhat.com> 0.0.6-1
 - Remove rdo-release-icehouse package so the subsequent install doesn't fail
   (jslagle@redhat.com)
