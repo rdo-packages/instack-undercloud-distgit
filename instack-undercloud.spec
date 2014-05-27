@@ -1,5 +1,5 @@
 Name:		instack-undercloud
-Version:	0.0.11
+Version:	0.0.12
 Release:	1%{?dist}
 Summary:	Installation tools to install an undercloud via instack
 
@@ -46,6 +46,8 @@ cp -ar json-files %{buildroot}/%{_datadir}/instack-undercloud
 %doc LICENSE
 %doc instack-baremetal.answers.sample
 %doc instack-virt.answers.sample
+%doc deploy-virt-overcloudrc
+%doc deploy-baremetal-overcloudrc
 %{_datadir}/instack-undercloud
 %{_bindir}/instack-install-undercloud
 %{_bindir}/instack-install-undercloud-packages
@@ -55,9 +57,24 @@ cp -ar json-files %{buildroot}/%{_datadir}/instack-undercloud
 %{_bindir}/instack-test-overcloud
 %{_bindir}/instack-build-images
 %{_bindir}/instack-virt-setup
+%{_bindir}/instack-delete-overcloud
+%{_bindir}/instack-delete-overcloud-tuskarcli
 
 
 %changelog
+* Tue May 27 2014 James Slagle <jslagle@redhat.com> 0.0.12-1
+- Package overcloud delete scripts (jslagle@redhat.com)
+- Use updated os-apply-config template path (jslagle@redhat.com)
+- Update instack-delete-overcloud-tuskarcli (ryan@ryanbrady.org)
+- Wait for cloud-final to complete before continuing on the test
+  (james.slagle@gmail.com)
+- Update README-packages.md (james.slagle@gmail.com)
+- Delete existing images in Glance before loading (bnemec@redhat.com)
+- added initial draft of scripts for resetting the instack env for additional
+  overcloud runs (rbrady@redhat.com)
+- Add sample deployrc files (jslagle@redhat.com)
+- Use package install type for pip and ironicclient when building overcloud
+  images (jslagle@redhat.com)
 * Fri Apr 25 2014 James Slagle <jslagle@redhat.com> 0.0.11-1
 - Revert "add --selinux-relabel option when creating instack image"
   (jslagle@redhat.com)
