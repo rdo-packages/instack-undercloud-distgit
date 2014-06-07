@@ -1,6 +1,6 @@
 Name:		instack-undercloud
 Version:	0.0.13
-Release:	1%{?dist}
+Release:	2%{?dist}
 Summary:	Installation tools to install an undercloud via instack
 
 Group:		Development/Languages
@@ -62,6 +62,9 @@ cp -ar json-files %{buildroot}/%{_datadir}/instack-undercloud
 
 
 %changelog
+* Sat Jun 07 2014 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 0.0.13-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_21_Mass_Rebuild
+
 * Wed May 28 2014 James Slagle <jslagle@redhat.com> 0.0.13-1
 - Create logfile directory before redirecting output via tee
   (jslagle@redhat.com)
