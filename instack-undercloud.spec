@@ -1,12 +1,12 @@
 Name:		instack-undercloud
-Version:	1.0.5
+Version:	1.0.6
 Release:	1%{?dist}
 Summary:	Installation tools to install an undercloud via instack
 
 Group:		Development/Languages
 License:	ASL 2.0
-URL:		https://github.com/agroup/instack-undercloud
-Source0:	%{name}-%{version}.tar.gz
+Url:		https://github.com/agroup/instack-undercloud
+Source0:	https://github.com/agroup/instack-undercloud/archive/%{version}.tar.gz
 
 BuildArch:	noarch
 
@@ -14,8 +14,7 @@ Requires:	instack
 Requires:	openstack-tripleo
 Requires:	openstack-tripleo-heat-templates
 Requires:	openstack-tripleo-image-elements
-Requires:	openstack-tuskar
-Requires:	openstack-tuskar-ui
+Requires:	os-cloud-config
 Requires:	redhat-lsb-core
 Requires:	policycoreutils-python
 
@@ -38,20 +37,33 @@ install -d -m 755 %{buildroot}/%{_datadir}/%{name}
 cp -ar elements/* %{buildroot}/%{_datadir}/%{name}
 # scripts
 install -d -m 755 %{buildroot}/%{_bindir}
-cp -ar scripts/* %{buildroot}/%{_bindir}
+cp scripts/instack-build-images %{buildroot}/%{_bindir}
+cp scripts/instack-delete-overcloud %{buildroot}/%{_bindir}
+cp scripts/instack-delete-overcloud-tuskarcli %{buildroot}/%{_bindir}
+cp scripts/instack-deploy-overcloud %{buildroot}/%{_bindir}
+cp scripts/instack-deploy-overcloud-tuskarcli %{buildroot}/%{_bindir}
+cp scripts/instack-install-undercloud %{buildroot}/%{_bindir}
+cp scripts/instack-install-undercloud-packages %{buildroot}/%{_bindir}
+cp scripts/instack-install-undercloud-source %{buildroot}/%{_bindir}
+cp scripts/instack-prepare-for-overcloud %{buildroot}/%{_bindir}
+cp scripts/instack-test-overcloud %{buildroot}/%{_bindir}
+cp scripts/instack-virt-setup %{buildroot}/%{_bindir}
+cp scripts/instack-prepare-discovery %{buildroot}/%{_bindir}
 # json files
 cp -ar json-files %{buildroot}/%{_datadir}/instack-undercloud
+# sourcerc
+cp instack-sourcerc %{buildroot}/%{_datadir}/instack-undercloud
 
 
 %files
 %doc README.md
 %doc LICENSE
-%doc instack-baremetal.answers.sample
-%doc instack-virt.answers.sample
+%doc instack.answers.sample
 %doc deploy-virt-overcloudrc
 %doc deploy-baremetal-overcloudrc
 %{_datadir}/instack-undercloud
 %{_bindir}/instack-install-undercloud
+%{_bindir}/instack-install-undercloud-source
 %{_bindir}/instack-install-undercloud-packages
 %{_bindir}/instack-prepare-for-overcloud
 %{_bindir}/instack-deploy-overcloud
@@ -59,11 +71,15 @@ cp -ar json-files %{buildroot}/%{_datadir}/instack-undercloud
 %{_bindir}/instack-test-overcloud
 %{_bindir}/instack-build-images
 %{_bindir}/instack-virt-setup
+%{_bindir}/instack-prepare-discovery
 %{_bindir}/instack-delete-overcloud
 %{_bindir}/instack-delete-overcloud-tuskarcli
 
 
 %changelog
+* Thu Oct 2 2014 James Slagle <jslagle@redhat.com> 1.0.6-1
+- Bump to 1.0.6
+
 * Wed Aug 20 2014 James Slagle <jslagle@redhat.com> 1.0.5-1
 - Wait for cinder volume to be available (jslagle@redhat.com)
 - Default all nodes to 3GB (jslagle@redhat.com)
