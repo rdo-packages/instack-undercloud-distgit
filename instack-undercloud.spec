@@ -1,5 +1,5 @@
 Name:		instack-undercloud
-Version:	1.0.6
+Version:	1.0.7
 Release:	1%{?dist}
 Summary:	Installation tools to install an undercloud via instack
 
@@ -39,11 +39,8 @@ cp -ar elements/* %{buildroot}/%{_datadir}/%{name}
 install -d -m 755 %{buildroot}/%{_bindir}
 cp scripts/instack-build-images %{buildroot}/%{_bindir}
 cp scripts/instack-delete-overcloud %{buildroot}/%{_bindir}
-cp scripts/instack-delete-overcloud-tuskarcli %{buildroot}/%{_bindir}
 cp scripts/instack-deploy-overcloud %{buildroot}/%{_bindir}
-cp scripts/instack-deploy-overcloud-tuskarcli %{buildroot}/%{_bindir}
 cp scripts/instack-install-undercloud %{buildroot}/%{_bindir}
-cp scripts/instack-install-undercloud-packages %{buildroot}/%{_bindir}
 cp scripts/instack-install-undercloud-source %{buildroot}/%{_bindir}
 cp scripts/instack-prepare-for-overcloud %{buildroot}/%{_bindir}
 cp scripts/instack-test-overcloud %{buildroot}/%{_bindir}
@@ -64,19 +61,19 @@ cp instack-sourcerc %{buildroot}/%{_datadir}/instack-undercloud
 %{_datadir}/instack-undercloud
 %{_bindir}/instack-install-undercloud
 %{_bindir}/instack-install-undercloud-source
-%{_bindir}/instack-install-undercloud-packages
 %{_bindir}/instack-prepare-for-overcloud
 %{_bindir}/instack-deploy-overcloud
-%{_bindir}/instack-deploy-overcloud-tuskarcli
 %{_bindir}/instack-test-overcloud
 %{_bindir}/instack-build-images
 %{_bindir}/instack-virt-setup
 %{_bindir}/instack-prepare-discovery
 %{_bindir}/instack-delete-overcloud
-%{_bindir}/instack-delete-overcloud-tuskarcli
 
 
 %changelog
+* Tue Oct 7 2014 James Slagle <jslagle@redhat.com> 1.0.7-1
+- Bump to 1.0.7
+
 * Thu Oct 2 2014 James Slagle <jslagle@redhat.com> 1.0.6-1
 - Bump to 1.0.6
 
