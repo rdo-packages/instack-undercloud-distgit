@@ -1,5 +1,5 @@
 Name:		instack-undercloud
-Version:	1.0.9
+Version:	1.0.10
 Release:	1%{?dist}
 Summary:	Installation tools to install an undercloud via instack
 
@@ -50,6 +50,8 @@ cp scripts/instack-prepare-discovery %{buildroot}/%{_bindir}
 cp -ar json-files %{buildroot}/%{_datadir}/instack-undercloud
 # sourcerc
 cp instack-sourcerc %{buildroot}/%{_datadir}/instack-undercloud
+# live
+cp -ar live %{buildroot}/%{_datadir}/instack-undercloud
 
 
 %files
@@ -71,6 +73,9 @@ cp instack-sourcerc %{buildroot}/%{_datadir}/instack-undercloud
 
 
 %changelog
+* Wed Oct 15 2014 James Slagle <jslagle@redhat.com> 1.0.10-1
+- Bump to 1.0.10
+
 * Wed Oct 8 2014 James Slagle <jslagle@redhat.com> 1.0.9-1
 - Bump to 1.0.9
 
