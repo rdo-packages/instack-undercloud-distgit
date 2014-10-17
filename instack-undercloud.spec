@@ -1,5 +1,5 @@
 Name:		instack-undercloud
-Version:	1.0.10
+Version:	1.0.11
 Release:	1%{?dist}
 Summary:	Installation tools to install an undercloud via instack
 
@@ -46,6 +46,7 @@ cp scripts/instack-prepare-for-overcloud %{buildroot}/%{_bindir}
 cp scripts/instack-test-overcloud %{buildroot}/%{_bindir}
 cp scripts/instack-virt-setup %{buildroot}/%{_bindir}
 cp scripts/instack-prepare-discovery %{buildroot}/%{_bindir}
+cp scripts/instack-setup-delorean %{buildroot}/%{_bindir}
 # json files
 cp -ar json-files %{buildroot}/%{_datadir}/instack-undercloud
 # sourcerc
@@ -70,9 +71,13 @@ cp -ar live %{buildroot}/%{_datadir}/instack-undercloud
 %{_bindir}/instack-virt-setup
 %{_bindir}/instack-prepare-discovery
 %{_bindir}/instack-delete-overcloud
+%{_bindir}/instack-setup-delorean
 
 
 %changelog
+* Fri Oct 17 2014 James Slagle <jslagle@redhat.com> 1.0.11-1
+- Bump to 1.0.11
+
 * Wed Oct 15 2014 James Slagle <jslagle@redhat.com> 1.0.10-1
 - Bump to 1.0.10
 
