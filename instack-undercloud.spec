@@ -1,5 +1,5 @@
 Name:		instack-undercloud
-Version:	1.0.15
+Version:	1.0.16
 Release:	1%{?dist}
 Summary:	Installation tools to install an undercloud via instack
 
@@ -18,8 +18,7 @@ Requires:	os-cloud-config
 Requires:	redhat-lsb-core
 Requires:	policycoreutils-python
 
-Requires:	selinux-policy >= 3.12.1-179
-
+Requires:	selinux-policy
 
 %description
 instack-undercloud is a collection of installation tools to install an
@@ -75,6 +74,9 @@ cp -ar live %{buildroot}/%{_datadir}/instack-undercloud
 
 
 %changelog
+* Tue Oct 21 2014 James Slagle <jslagle@redhat.com> 1.0.16-1
+- Bump to 1.0.16
+
 * Mon Oct 20 2014 James Slagle <jslagle@redhat.com> 1.0.15-1
 - Bump to 1.0.15
 
