@@ -1,5 +1,5 @@
 Name:		instack-undercloud
-Version:	1.0.16
+Version:	1.0.17
 Release:	1%{?dist}
 Summary:	Installation tools to install an undercloud via instack
 
@@ -14,7 +14,6 @@ Requires:	instack
 Requires:	openstack-tripleo
 Requires:	openstack-tripleo-heat-templates
 Requires:	openstack-tripleo-image-elements
-Requires:	os-cloud-config
 Requires:	redhat-lsb-core
 Requires:	policycoreutils-python
 
@@ -74,6 +73,9 @@ cp -ar live %{buildroot}/%{_datadir}/instack-undercloud
 
 
 %changelog
+* Wed Oct 22 2014 James Slagle <jslagle@redhat.com> 1.0.17-1
+- Bump to 1.0.17
+
 * Tue Oct 21 2014 James Slagle <jslagle@redhat.com> 1.0.16-1
 - Bump to 1.0.16
 
