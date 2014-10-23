@@ -1,5 +1,5 @@
 Name:		instack-undercloud
-Version:	1.0.18
+Version:	1.0.19
 Release:	1%{?dist}
 Summary:	Installation tools to install an undercloud via instack
 
@@ -74,6 +74,15 @@ install -m 644 deploy-baremetal-overcloudrc %{buildroot}/%{_datadir}/%{name}/dep
 
 
 %changelog
+* Thu Oct 23 2014 James Slagle <jslagle@redhat.com> 1.0.19-1
+- Update REAMDE-packages.md
+- Install python-ironicclient from rdo stage now
+- remove some installs from koji now that they are available in RDO stage
+- Disable source install of discoverd and drop redundant line
+- Also switch discovery dnsmasq to package install
+- Make possible to install ironic-discoverd from RPM
+- RHEL and Fedora compatible keepalived custom policy
+
 * Wed Oct 22 2014 James Slagle <jslagle@redhat.com> 1.0.18-1
 - Use $NODE_COUNT instead of $NODE_CNT so that we can override and create less than nodes.
 - Update README-packages.md
