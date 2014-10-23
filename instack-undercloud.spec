@@ -1,5 +1,5 @@
 Name:		instack-undercloud
-Version:	1.0.19
+Version:	1.0.20
 Release:	1%{?dist}
 Summary:	Installation tools to install an undercloud via instack
 
@@ -74,6 +74,16 @@ install -m 644 deploy-baremetal-overcloudrc %{buildroot}/%{_datadir}/%{name}/dep
 
 
 %changelog
+* Thu Oct 23 2014 James Slagle <jslagle@redhat.com> 1.0.20-1
+- Build discovery ramdisk using dracut
+- Default to just control and compute in deploy-virt-overcloudrc
+- Add rdo-juno-stage element
+- Run at 11-rdo-juno instead so that rdo-release has already been installed
+- Remove {BLOCKSTORAGE,SWIFTSTORAGE}SCALE knowledge from test-overcloud
+- Update rdo-juno to use rdo-release element from tie and install correct
+  version of python-ironicclient base on f20 or el7
+- Update REAMDE-packages.md
+
 * Thu Oct 23 2014 James Slagle <jslagle@redhat.com> 1.0.19-1
 - Update REAMDE-packages.md
 - Install python-ironicclient from rdo stage now
