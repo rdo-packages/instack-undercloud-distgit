@@ -1,5 +1,5 @@
 Name:		instack-undercloud
-Version:	1.0.17
+Version:	1.0.18
 Release:	1%{?dist}
 Summary:	Installation tools to install an undercloud via instack
 
@@ -51,14 +51,15 @@ cp -ar json-files %{buildroot}/%{_datadir}/instack-undercloud
 cp instack-sourcerc %{buildroot}/%{_datadir}/instack-undercloud
 # live
 cp -ar live %{buildroot}/%{_datadir}/instack-undercloud
+# sample files
+install -m 644 instack.answers.sample %{buildroot}/%{_datadir}/%{name}/instack.answers.sample
+install -m 644 deploy-virt-overcloudrc %{buildroot}/%{_datadir}/%{name}/deploy-virt-overcloudrc
+install -m 644 deploy-baremetal-overcloudrc %{buildroot}/%{_datadir}/%{name}/deploy-baremetal-overcloudrc
 
 
 %files
 %doc README.md
 %doc LICENSE
-%doc instack.answers.sample
-%doc deploy-virt-overcloudrc
-%doc deploy-baremetal-overcloudrc
 %{_datadir}/instack-undercloud
 %{_bindir}/instack-install-undercloud
 %{_bindir}/instack-install-undercloud-source
@@ -73,6 +74,13 @@ cp -ar live %{buildroot}/%{_datadir}/instack-undercloud
 
 
 %changelog
+* Wed Oct 22 2014 James Slagle <jslagle@redhat.com> 1.0.18-1
+- Use $NODE_COUNT instead of $NODE_CNT so that we can override and create less than nodes.
+- Update README-packages.md
+
+* Wed Oct 22 2014 James Slagle <jslagle@redhat.com> 1.0.17-2
+- Install sample files just under /usr/share/instack-undercloud
+
 * Wed Oct 22 2014 James Slagle <jslagle@redhat.com> 1.0.17-1
 - Bump to 1.0.17
 
