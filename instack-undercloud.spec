@@ -1,5 +1,5 @@
 Name:		instack-undercloud
-Version:	1.0.20
+Version:	1.0.21
 Release:	1%{?dist}
 Summary:	Installation tools to install an undercloud via instack
 
@@ -74,6 +74,12 @@ install -m 644 deploy-baremetal-overcloudrc %{buildroot}/%{_datadir}/%{name}/dep
 
 
 %changelog
+* Fri Oct 24 2014 James Slagle <jslagle@redhat.com> 1.0.21-1
+- Remove tripleo-image-elements from overcloud image builds for now
+- Add dib cherry-pick for unset trap in ramdisk
+- Use 4GB of ram for the undercloud as well
+- Update completion message
+
 * Thu Oct 23 2014 James Slagle <jslagle@redhat.com> 1.0.20-1
 - Build discovery ramdisk using dracut
 - Default to just control and compute in deploy-virt-overcloudrc
