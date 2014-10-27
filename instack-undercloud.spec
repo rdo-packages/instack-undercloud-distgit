@@ -1,5 +1,5 @@
 Name:		instack-undercloud
-Version:	1.0.21
+Version:	1.0.22
 Release:	1%{?dist}
 Summary:	Installation tools to install an undercloud via instack
 
@@ -74,6 +74,19 @@ install -m 644 deploy-baremetal-overcloudrc %{buildroot}/%{_datadir}/%{name}/dep
 
 
 %changelog
+* Mon Oct 27 2014 James Slagle <jslagle@redhat.com> 1.0.22-1
+- Remove workaround for python-swiftclient
+- Update utlity image kickstart to not use copr by default
+- Remove python-ironicclient workaround for el7 as well
+- Use package-installs for ironic-discoverd and remove install from koji
+- No longer need python-ironicclient workaround, it's now in rdo juno
+- Add an element to use the copr repo
+- Cherry pick combining multiple custom policy installs into one operation
+- Update selinux cherry pick revisions
+- Don't need to remove keepalived custom policy on RHEL
+- Update README-packages.md
+- Source instack.answers in test-overcloud to use IMAGE_PATH
+
 * Fri Oct 24 2014 James Slagle <jslagle@redhat.com> 1.0.21-1
 - Remove tripleo-image-elements from overcloud image builds for now
 - Add dib cherry-pick for unset trap in ramdisk
