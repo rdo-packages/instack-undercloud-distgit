@@ -1,5 +1,5 @@
 Name:		instack-undercloud
-Version:	1.0.22
+Version:	1.0.23
 Release:	1%{?dist}
 Summary:	Installation tools to install an undercloud via instack
 
@@ -74,6 +74,9 @@ install -m 644 deploy-baremetal-overcloudrc %{buildroot}/%{_datadir}/%{name}/dep
 
 
 %changelog
+* Mon Oct 27 2014 James Slagle <jslagle@redhat.com> 1.0.23-1
+- package-installs file should not be +x
+
 * Mon Oct 27 2014 James Slagle <jslagle@redhat.com> 1.0.22-1
 - Remove workaround for python-swiftclient
 - Update utlity image kickstart to not use copr by default
