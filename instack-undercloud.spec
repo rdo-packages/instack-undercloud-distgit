@@ -1,5 +1,5 @@
 Name:		instack-undercloud
-Version:	1.0.24
+Version:	1.0.25
 Release:	1%{?dist}
 Summary:	Installation tools to install an undercloud via instack
 
@@ -74,6 +74,9 @@ install -m 644 deploy-baremetal-overcloudrc %{buildroot}/%{_datadir}/%{name}/dep
 
 
 %changelog
+* Wed Oct 29 2014 James Slagle <jslagle@redhat.com> 1.0.25-1
+- Allow setting $BM_NETWORK_GATEWAY
+
 * Tue Oct 28 2014 James Slagle <jslagle@redhat.com> 1.0.24-1
 - Update README-build-images.md
 - Add tripleo-image-elements element to all image builds
