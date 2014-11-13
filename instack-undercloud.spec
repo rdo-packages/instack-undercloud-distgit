@@ -1,5 +1,5 @@
 Name:		instack-undercloud
-Version:	1.0.25
+Version:	1.0.26
 Release:	1%{?dist}
 Summary:	Installation tools to install an undercloud via instack
 
@@ -74,6 +74,17 @@ install -m 644 deploy-baremetal-overcloudrc %{buildroot}/%{_datadir}/%{name}/dep
 
 
 %changelog
+* Thu Nov 13 2014 Ben Nemec <bnemec@redhat.com> 1.0.26-1
+- Choose the correct json file depending on your OS
+- Add rhel-7-undercloud-packages.json
+- Be smarter about default NODE_DIST
+- Add epel and rdo-release to DIB_COMMON_ELEMENTS
+- add cherry pick for dib to install lsb package
+- Removed cherry pick for heat templates
+- Overcloud update using Tuskar
+- Adds capability to set undercloud nameserver
+- instack-apply-config updates
+
 * Wed Oct 29 2014 James Slagle <jslagle@redhat.com> 1.0.25-1
 - Allow setting $BM_NETWORK_GATEWAY
 
