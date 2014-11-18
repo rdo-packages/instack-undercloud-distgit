@@ -1,5 +1,5 @@
 Name:		instack-undercloud
-Version:	1.0.26
+Version:	1.0.27
 Release:	1%{?dist}
 Summary:	Installation tools to install an undercloud via instack
 
@@ -74,6 +74,9 @@ install -m 644 deploy-baremetal-overcloudrc %{buildroot}/%{_datadir}/%{name}/dep
 
 
 %changelog
+* Tue Nov 18 2014 Ben Nemec <bnemec@redhat.com> 1.0.27-1
+- Add wc binary-dep to discovery ramdisk
+
 * Thu Nov 13 2014 Ben Nemec <bnemec@redhat.com> 1.0.26-1
 - Choose the correct json file depending on your OS
 - Add rhel-7-undercloud-packages.json
