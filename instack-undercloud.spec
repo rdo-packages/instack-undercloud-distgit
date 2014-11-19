@@ -1,5 +1,5 @@
 Name:		instack-undercloud
-Version:	1.0.27
+Version:	1.0.28
 Release:	1%{?dist}
 Summary:	Installation tools to install an undercloud via instack
 
@@ -74,6 +74,9 @@ install -m 644 deploy-baremetal-overcloudrc %{buildroot}/%{_datadir}/%{name}/dep
 
 
 %changelog
+* Wed Nov 19 2014 Ben Nemec <bnemec@redhat.com> 1.0.28-1
+- Allow firewall access to port 5050 for discoverd
+
 * Tue Nov 18 2014 Ben Nemec <bnemec@redhat.com> 1.0.27-1
 - Add wc binary-dep to discovery ramdisk
 
