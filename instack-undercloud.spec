@@ -1,5 +1,5 @@
 Name:		instack-undercloud
-Version:	1.0.29
+Version:	1.0.30
 Release:	1%{?dist}
 Summary:	Installation tools to install an undercloud via instack
 
@@ -74,6 +74,9 @@ install -m 644 deploy-baremetal-overcloudrc %{buildroot}/%{_datadir}/%{name}/dep
 
 
 %changelog
+* Thu Nov 20 2014 Ben Nemec <bnemec@redhat.com> 1.0.30-1
+- Fix rhel registration problem when installing undercloud
+
 * Thu Nov 20 2014 Ben Nemec <bnemec@redhat.com> 1.0.29-1
 - Fixes for tuskar and block storage
 
