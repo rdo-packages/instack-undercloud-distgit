@@ -1,5 +1,5 @@
 Name:		instack-undercloud
-Version:	1.0.30
+Version:	1.0.31
 Release:	1%{?dist}
 Summary:	Installation tools to install an undercloud via instack
 
@@ -74,6 +74,14 @@ install -m 644 deploy-baremetal-overcloudrc %{buildroot}/%{_datadir}/%{name}/dep
 
 
 %changelog
+* Wed Dec 03 2014 James Slagle <jslagle@redhat.com> 1.0.31-1
+- Add rhos-release element and use it in instack-build-images when building RHOS images
+- Download the fedora cloud image if necessary.
+- Update with new url of stage repo
+- Update README-packages.md
+- Merge pull request #84 from Ladas/master
+- Add isolated-build element
+
 * Thu Nov 20 2014 Ben Nemec <bnemec@redhat.com> 1.0.30-1
 - Fix rhel registration problem when installing undercloud
 
