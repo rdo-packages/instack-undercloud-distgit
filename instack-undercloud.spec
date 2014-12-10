@@ -1,5 +1,5 @@
 Name:		instack-undercloud
-Version:	1.0.32
+Version:	1.0.33
 Release:	1%{?dist}
 Summary:	Installation tools to install an undercloud via instack
 
@@ -74,6 +74,10 @@ install -m 644 deploy-baremetal-overcloudrc %{buildroot}/%{_datadir}/%{name}/dep
 
 
 %changelog
+* Wed Dec 10 2014 James Slagle <jslagle@redhat.com> 1.0.33-1
+- Default filesystem type to XFS for RHEL 7.
+- Uses NODE_MEM and NODE_CPU when setting up the undercloud VM
+
 * Thu Dec 04 2014 James Slagle <jslagle@redhat.com> 1.0.32-1
 - Split $RHOS logic into a $RHOS and $RHOS_RELEASE.
 
