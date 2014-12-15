@@ -40,11 +40,12 @@ cp scripts/instack-delete-overcloud %{buildroot}/%{_bindir}
 cp scripts/instack-deploy-overcloud %{buildroot}/%{_bindir}
 cp scripts/instack-install-undercloud %{buildroot}/%{_bindir}
 cp scripts/instack-install-undercloud-source %{buildroot}/%{_bindir}
-cp scripts/instack-prepare-for-overcloud %{buildroot}/%{_bindir}
-cp scripts/instack-test-overcloud %{buildroot}/%{_bindir}
-cp scripts/instack-virt-setup %{buildroot}/%{_bindir}
 cp scripts/instack-prepare-discovery %{buildroot}/%{_bindir}
+cp scripts/instack-prepare-for-overcloud %{buildroot}/%{_bindir}
 cp scripts/instack-setup-delorean %{buildroot}/%{_bindir}
+cp scripts/instack-test-overcloud %{buildroot}/%{_bindir}
+cp scripts/instack-update-overcloud %{buildroot}/%{_bindir}
+cp scripts/instack-virt-setup %{buildroot}/%{_bindir}
 # json files
 cp -ar json-files %{buildroot}/%{_datadir}/instack-undercloud
 # sourcerc
