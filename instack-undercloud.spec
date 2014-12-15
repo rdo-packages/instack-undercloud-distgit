@@ -1,6 +1,6 @@
 Name:		instack-undercloud
 Version:	1.0.33
-Release:	1%{?dist}
+Release:	2%{?dist}
 Summary:	Installation tools to install an undercloud via instack
 
 Group:		Development/Languages
@@ -61,19 +61,23 @@ install -m 644 deploy-baremetal-overcloudrc %{buildroot}/%{_datadir}/%{name}/dep
 %doc README.md
 %doc LICENSE
 %{_datadir}/instack-undercloud
+%{_bindir}/instack-build-images
+%{_bindir}/instack-delete-overcloud
+%{_bindir}/instack-deploy-overcloud
 %{_bindir}/instack-install-undercloud
 %{_bindir}/instack-install-undercloud-source
-%{_bindir}/instack-prepare-for-overcloud
-%{_bindir}/instack-deploy-overcloud
-%{_bindir}/instack-test-overcloud
-%{_bindir}/instack-build-images
-%{_bindir}/instack-virt-setup
 %{_bindir}/instack-prepare-discovery
-%{_bindir}/instack-delete-overcloud
+%{_bindir}/instack-prepare-for-overcloud
 %{_bindir}/instack-setup-delorean
+%{_bindir}/instack-test-overcloud
+%{_bindir}/instack-update-overcloud
+%{_bindir}/instack-virt-setup
 
 
 %changelog
+* Mon Dec 15 2014 James Slagle <jslagle@redhat.com> 1.0.33-2
+- Include instack-update-overcloud
+
 * Wed Dec 10 2014 James Slagle <jslagle@redhat.com> 1.0.33-1
 - Default filesystem type to XFS for RHEL 7.
 - Uses NODE_MEM and NODE_CPU when setting up the undercloud VM
