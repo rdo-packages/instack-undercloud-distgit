@@ -1,6 +1,6 @@
 Name:		instack-undercloud
-Version:	1.0.33
-Release:	2%{?dist}
+Version:	1.0.34
+Release:	1%{?dist}
 Summary:	Installation tools to install an undercloud via instack
 
 Group:		Development/Languages
@@ -76,6 +76,17 @@ install -m 644 deploy-baremetal-overcloudrc %{buildroot}/%{_datadir}/%{name}/dep
 
 
 %changelog
+* Tue Dec 23 2014 James Slagle <jslagle@redhat.com> 1.0.34-1
+- Set biosdevname=1 in pxe_append_params for Ironic
+- Add sysctl to all images
+- Use sudo when running os-apply-config so that we can always read the data
+  files
+- Delete not existent cinder params
+- Fix check for fedora user image. This error was non-fatal, but through an
+  error message.
+- Export FS_TYPE in instack-virt-setup
+- Default to XFS for rhel7/centos7
+
 * Mon Dec 15 2014 James Slagle <jslagle@redhat.com> 1.0.33-2
 - Include instack-update-overcloud
 
