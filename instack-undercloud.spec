@@ -1,5 +1,5 @@
 Name:		instack-undercloud
-Version:	1.0.34
+Version:	1.0.35
 Release:	1%{?dist}
 Summary:	Installation tools to install an undercloud via instack
 
@@ -76,6 +76,10 @@ install -m 644 deploy-baremetal-overcloudrc %{buildroot}/%{_datadir}/%{name}/dep
 
 
 %changelog
+* Mon Jan 05 2015 James Slagle <jslagle@redhat.com> 1.0.35-1
+- Make the default $JSONFILE for RHEL 7 be the RHOS 6 version
+- Add tuskar-ui-extras
+
 * Tue Dec 23 2014 James Slagle <jslagle@redhat.com> 1.0.34-1
 - Set biosdevname=1 in pxe_append_params for Ironic
 - Add sysctl to all images
