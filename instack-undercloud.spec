@@ -1,5 +1,5 @@
 Name:		instack-undercloud
-Version:	1.0.35
+Version:	1.0.36
 Release:	1%{?dist}
 Summary:	Installation tools to install an undercloud via instack
 
@@ -76,6 +76,11 @@ install -m 644 deploy-baremetal-overcloudrc %{buildroot}/%{_datadir}/%{name}/dep
 
 
 %changelog
+* Wed Jan 07 2015 James Slagle <jslagle@redhat.com> 1.0.36-1
+- Don't check for fedora-user.qcow2 as it doesn't make sense to do so in
+  a baremetal environment.
+- Don't ever install python-pip and python-virtualenv on RHOS 6.
+
 * Mon Jan 05 2015 James Slagle <jslagle@redhat.com> 1.0.35-1
 - Make the default $JSONFILE for RHEL 7 be the RHOS 6 version
 - Add tuskar-ui-extras
