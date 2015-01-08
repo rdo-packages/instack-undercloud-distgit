@@ -1,5 +1,5 @@
 Name:		instack-undercloud
-Version:	1.0.36
+Version:	1.0.37
 Release:	1%{?dist}
 Summary:	Installation tools to install an undercloud via instack
 
@@ -76,6 +76,10 @@ install -m 644 deploy-baremetal-overcloudrc %{buildroot}/%{_datadir}/%{name}/dep
 
 
 %changelog
+* Thu Jan 08 2015 James Slagle <jslagle@redhat.com> 1.0.37-1
+- Get rid of usage of stackuser element on the undercloud and
+  overcloud.
+
 * Wed Jan 07 2015 James Slagle <jslagle@redhat.com> 1.0.36-1
 - Don't check for fedora-user.qcow2 as it doesn't make sense to do so in
   a baremetal environment.
