@@ -1,5 +1,5 @@
 Name:		instack-undercloud
-Version:	1.0.38
+Version:	1.0.39
 Release:	1%{?dist}
 Summary:	Installation tools to install an undercloud via instack
 
@@ -76,6 +76,10 @@ install -m 644 deploy-baremetal-overcloudrc %{buildroot}/%{_datadir}/%{name}/dep
 
 
 %changelog
+* Mon Jan 12 2015 James Slagle <jslagle@redhat.com> 1.0.39-1
+- Correct the name for openstack-tuskar-ui-extras
+- Manipulate NeutronL3HA as needed when using --tuskar as well
+
 * Fri Jan 09 2015 James Slagle <jslagle@redhat.com> 1.0.38-1
 - Enable NeutronL3HA if CONTROLSCALE >1 in deploy-overcloud script
 - Added support for ExtraConfig
