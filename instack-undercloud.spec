@@ -1,6 +1,6 @@
 Name:		instack-undercloud
-Version:	1.0.40
-Release:	1%{?dist}
+Version:	XXX
+Release:	XXX%{?dist}
 Summary:	Installation tools to install an undercloud via instack
 
 Group:		Development/Languages
@@ -26,7 +26,7 @@ installation.
 
 
 %prep
-%setup -q -n %{name}-%{version}
+%setup -q -n %{name}-%{upstream_version}
 
 
 %install
