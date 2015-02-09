@@ -40,7 +40,6 @@ cp scripts/instack-delete-overcloud %{buildroot}/%{_bindir}
 cp scripts/instack-deploy-overcloud %{buildroot}/%{_bindir}
 cp scripts/instack-install-undercloud %{buildroot}/%{_bindir}
 cp scripts/instack-install-undercloud-source %{buildroot}/%{_bindir}
-cp scripts/instack-prepare-discovery %{buildroot}/%{_bindir}
 cp scripts/instack-prepare-for-overcloud %{buildroot}/%{_bindir}
 cp scripts/instack-setup-delorean %{buildroot}/%{_bindir}
 cp scripts/instack-test-overcloud %{buildroot}/%{_bindir}
@@ -67,7 +66,6 @@ install -m 644 deploy-baremetal-overcloudrc %{buildroot}/%{_datadir}/%{name}/dep
 %{_bindir}/instack-deploy-overcloud
 %{_bindir}/instack-install-undercloud
 %{_bindir}/instack-install-undercloud-source
-%{_bindir}/instack-prepare-discovery
 %{_bindir}/instack-prepare-for-overcloud
 %{_bindir}/instack-setup-delorean
 %{_bindir}/instack-test-overcloud
