@@ -5,8 +5,8 @@ Summary:	Installation tools to install an undercloud via instack
 
 Group:		Development/Languages
 License:	ASL 2.0
-Url:		https://github.com/agroup/instack-undercloud
-Source0:	https://github.com/agroup/instack-undercloud/archive/%{version}.tar.gz
+Url:		https://github.com/rdo-management/instack-undercloud
+Source0:	https://github.com/rdo-management/instack-undercloud/archive/%{version}.tar.gz
 
 BuildArch:	noarch
 
@@ -16,6 +16,8 @@ Requires:	openstack-tripleo-heat-templates
 Requires:	openstack-tripleo-image-elements
 Requires:	redhat-lsb-core
 Requires:	policycoreutils-python
+Requires:	openstack-heat-templates
+Requires:	openstack-tripleo-puppet-elements
 
 Requires:	selinux-policy
 
@@ -28,50 +30,19 @@ installation.
 %prep
 %setup -q -n %{name}-%{upstream_version}
 
+%build
+%{__python} setup.py build
 
 %install
-# elements
-install -d -m 755 %{buildroot}/%{_datadir}/%{name}
-cp -ar elements/* %{buildroot}/%{_datadir}/%{name}
-# scripts
-install -d -m 755 %{buildroot}/%{_bindir}
-cp scripts/instack-build-images %{buildroot}/%{_bindir}
-cp scripts/instack-delete-overcloud %{buildroot}/%{_bindir}
-cp scripts/instack-deploy-overcloud %{buildroot}/%{_bindir}
-cp scripts/instack-install-undercloud %{buildroot}/%{_bindir}
-cp scripts/instack-install-undercloud-source %{buildroot}/%{_bindir}
-cp scripts/instack-prepare-for-overcloud %{buildroot}/%{_bindir}
-cp scripts/instack-setup-delorean %{buildroot}/%{_bindir}
-cp scripts/instack-test-overcloud %{buildroot}/%{_bindir}
-cp scripts/instack-update-overcloud %{buildroot}/%{_bindir}
-cp scripts/instack-virt-setup %{buildroot}/%{_bindir}
-# json files
-cp -ar json-files %{buildroot}/%{_datadir}/instack-undercloud
-# sourcerc
-cp instack-sourcerc %{buildroot}/%{_datadir}/instack-undercloud
-# live
-cp -ar live %{buildroot}/%{_datadir}/instack-undercloud
-# sample files
-install -m 644 instack.answers.sample %{buildroot}/%{_datadir}/%{name}/instack.answers.sample
-install -m 644 deploy-virt-overcloudrc %{buildroot}/%{_datadir}/%{name}/deploy-virt-overcloudrc
-install -m 644 deploy-baremetal-overcloudrc %{buildroot}/%{_datadir}/%{name}/deploy-baremetal-overcloudrc
+%{__python} setup.py install -O1 --skip-build --root=%{buildroot}
 
 
 %files
 %doc README.md
 %doc LICENSE
 %{_datadir}/instack-undercloud
-%{_bindir}/instack-build-images
-%{_bindir}/instack-delete-overcloud
-%{_bindir}/instack-deploy-overcloud
-%{_bindir}/instack-install-undercloud
-%{_bindir}/instack-install-undercloud-source
-%{_bindir}/instack-prepare-for-overcloud
-%{_bindir}/instack-setup-delorean
-%{_bindir}/instack-test-overcloud
-%{_bindir}/instack-update-overcloud
-%{_bindir}/instack-virt-setup
-
+%{_bindir}/instack-*
+%{python_sitelib}/instack_undercloud*
 
 %changelog
 * Wed Jan 14 2015 James Slagle <jslagle@redhat.com> 1.0.40-1
