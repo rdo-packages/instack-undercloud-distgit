@@ -18,6 +18,7 @@ Requires:	redhat-lsb-core
 Requires:	policycoreutils-python
 Requires:	openstack-heat-templates
 Requires:	openstack-tripleo-puppet-elements
+Requires:	python-psutil
 
 Requires:	selinux-policy
 
