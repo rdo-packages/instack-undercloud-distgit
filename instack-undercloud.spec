@@ -15,7 +15,11 @@ Url:		https://github.com/rdo-management/instack-undercloud
 Source0:  https://github.com/openstack/%{name}/archive/%{commit0}.tar.gz#/%{name}-%{shortcommit0}.tar.gz
 
 BuildArch:	noarch
-BuildRequires: git
+BuildRequires:	git
+BuildRequires:	python2-devel
+BuildRequires:	python-setuptools
+BuildRequires:	python-pbr
+
 
 Requires:	instack
 Requires:	openstack-tripleo
