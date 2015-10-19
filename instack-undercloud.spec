@@ -1,14 +1,21 @@
+%global commit0 b084ff6ef783c54dfe4dda178c64520a2eaa0dfb
+%global shortcommit0 %(c=%{commit0}; echo ${c:0:7})
+
+%{!?upstream_version: %global upstream_version %{version}}
+
 Name:		instack-undercloud
-Version:	XXX
-Release:	XXX%{?dist}
+Version:	2.1.3
+Release:	1%{?dist}
 Summary:	Installation tools to install an undercloud via instack
 
 Group:		Development/Languages
 License:	ASL 2.0
 Url:		https://github.com/rdo-management/instack-undercloud
-Source0:	https://github.com/rdo-management/instack-undercloud/archive/%{version}.tar.gz
+# Once we have stable branches and stable releases we can go back to using release tarballs
+Source0:  https://github.com/openstack/%{name}/archive/%{commit0}.tar.gz#/%{name}-%{shortcommit0}.tar.gz
 
 BuildArch:	noarch
+BuildRequires: git
 
 Requires:	instack
 Requires:	openstack-tripleo
@@ -29,7 +36,7 @@ installation.
 
 
 %prep
-%setup -q -n %{name}-%{upstream_version}
+%autosetup -n %{name}-%{commit0} -S git
 
 %build
 %{__python} setup.py build
@@ -46,6 +53,9 @@ installation.
 %{python_sitelib}/instack_undercloud*
 
 %changelog
+* Mon Oct 19 2015 John Trowbridge <trown@redhat.com> - 2.1.3-1
+- Use a source tarball for a git hash that has passed delorean CI for liberty release
+
 * Wed Jan 14 2015 James Slagle <jslagle@redhat.com> 1.0.40-1
 - Add tuskar-ui-extras postinstall
 
