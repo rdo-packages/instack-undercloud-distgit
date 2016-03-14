@@ -10,6 +10,9 @@ Source0:	https://github.com/rdo-management/instack-undercloud/archive/%{version}
 
 BuildArch:	noarch
 
+BuildRequires:  python2-devel
+BuildRequires:  python-pbr
+BuildRequires:  python-setuptools
 Requires:	instack
 Requires:	openstack-tripleo
 Requires:	openstack-tripleo-heat-templates
