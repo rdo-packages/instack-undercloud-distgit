@@ -1,18 +1,19 @@
 Name:		instack-undercloud
 Version:	XXX
-Release:	XXX%{?dist}
+Release:	XXX
 Summary:	Installation tools to install an undercloud via instack
 
 Group:		Development/Languages
 License:	ASL 2.0
-Url:		https://github.com/rdo-management/instack-undercloud
-Source0:	https://github.com/rdo-management/instack-undercloud/archive/%{version}.tar.gz
+Url:		https://github.com/openstack/instack-undercloud
+Source0:	https://github.com/openstack/instack-undercloud/archive/%{version}.tar.gz
 
 BuildArch:	noarch
 
 BuildRequires:  python2-devel
 BuildRequires:  python-pbr
 BuildRequires:  python-setuptools
+BuildRequires:  git
 Requires:	instack
 Requires:	openstack-tripleo
 Requires:	openstack-tripleo-heat-templates
@@ -32,13 +33,13 @@ installation.
 
 
 %prep
-%setup -q -n %{name}-%{upstream_version}
+%autosetup -S git -n %{name}-%{upstream_version}
 
 %build
-%{__python} setup.py build
+%{__python2} setup.py build
 
 %install
-%{__python} setup.py install -O1 --skip-build --root=%{buildroot}
+%{__python2} setup.py install -O1 --skip-build --root=%{buildroot}
 
 
 %files
@@ -46,6 +47,6 @@ installation.
 %doc LICENSE
 %{_datadir}/instack-undercloud
 %{_bindir}/instack-*
-%{python_sitelib}/instack_undercloud*
+%{python2_sitelib}/instack_undercloud*
 
 %changelog
