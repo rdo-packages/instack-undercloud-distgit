@@ -1,12 +1,15 @@
+
+%{!?upstream_version: %global upstream_version %{version}%{?milestone}}
+
 Name:		instack-undercloud
-Version:	XXX
-Release:	XXX
+Version:	4.0.0
+Release:	1%{?dist}
 Summary:	Installation tools to install an undercloud via instack
 
 Group:		Development/Languages
 License:	ASL 2.0
 Url:		https://github.com/openstack/instack-undercloud
-Source0:	https://github.com/openstack/instack-undercloud/archive/%{version}.tar.gz
+Source0:	https://github.com/openstack/instack-undercloud/archive/%{version}%{?milestone}.tar.gz
 
 BuildArch:	noarch
 
@@ -50,3 +53,5 @@ installation.
 %{python2_sitelib}/instack_undercloud*
 
 %changelog
+* Wed Mar 30 2016 RDO <rdo-list@redhat.com> 4.0.0-1
+- RC1 Rebuild for Mitaka RC1 
