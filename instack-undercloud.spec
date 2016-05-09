@@ -23,6 +23,9 @@ Requires:	policycoreutils-python
 Requires:	openstack-heat-templates
 Requires:	openstack-tripleo-puppet-elements
 Requires:	python-psutil
+Requires:	pystache
+Requires:	jq
+Requires:	os-net-config
 
 Requires:	selinux-policy
 
