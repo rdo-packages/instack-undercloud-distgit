@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "dabed58f_5205aac0",
+        "filename": "instack-undercloud.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 16
+      },
+      "writtenOn": "2016-05-11T14:57:06Z",
+      "side": 1,
+      "message": "Should the python deps be added to upstream reqs.txt ? I don\u0027t see those: https://github.com/openstack/instack-undercloud/blob/master/requirements.txt\n\nIt feels odd to add them in packaging if they\u0027re not an upstream req.",
+      "revId": "aee374e230a00ed3e77f3b45775c0da68d73a1b8",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
