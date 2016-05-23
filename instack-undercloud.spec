@@ -30,6 +30,7 @@ Requires:	os-cloud-config
 Requires:	os-apply-config
 Requires:	os-refresh-config
 Requires:	puppet
+Requires:	openstack-puppet-modules
 
 Requires:	selinux-policy
 
