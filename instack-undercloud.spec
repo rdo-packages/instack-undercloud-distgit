@@ -4,7 +4,7 @@
 %{!?upstream_version: %global upstream_version %{version}}
 
 Name:		instack-undercloud
-Version:	2.1.3
+Version:	2.2.7
 Release:	1%{?dist}
 Summary:	Installation tools to install an undercloud via instack
 
@@ -57,6 +57,9 @@ installation.
 %{python_sitelib}/instack_undercloud*
 
 %changelog
+* Fri Jun 17 2016 Haikel Guemar <hguemar@fedoraproject.org> 2.2.7-1
+- Update to 2.2.7
+
 * Mon Oct 19 2015 John Trowbridge <trown@redhat.com> - 2.1.3-1
 - Use a source tarball for a git hash that has passed delorean CI for liberty release
 
