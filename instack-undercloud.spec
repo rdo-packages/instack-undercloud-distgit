@@ -2,7 +2,7 @@
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
 Name:		instack-undercloud
-Version:	4.0.0
+Version:	4.1.0
 Release:	1%{?dist}
 Summary:	Installation tools to install an undercloud via instack
 
@@ -53,5 +53,8 @@ installation.
 %{python2_sitelib}/instack_undercloud*
 
 %changelog
+* Fri Jun 17 2016 Haikel Guemar <hguemar@fedoraproject.org> 4.1.0-1
+- Update to 4.1.0
+
 * Wed Mar 30 2016 RDO <rdo-list@redhat.com> 4.0.0-1
 - RC1 Rebuild for Mitaka RC1 
