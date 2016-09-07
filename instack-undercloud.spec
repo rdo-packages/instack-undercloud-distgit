@@ -27,8 +27,7 @@ Requires:	pystache
 Requires:	jq
 Requires:	os-net-config
 Requires:	os-cloud-config
-Requires:	os-apply-config
-Requires:	os-refresh-config
+Requires:	python-heat-agent
 Requires:	puppet
 Requires:	openstack-puppet-modules
 
