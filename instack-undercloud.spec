@@ -7,7 +7,7 @@ Summary:	Installation tools to install an undercloud via instack
 Group:		Development/Languages
 License:	ASL 2.0
 Url:		https://github.com/openstack/instack-undercloud
-Source0:	https://github.com/openstack/instack-undercloud/archive/%{version}.tar.gz
+Source0:	https://tarballs.openstack.org/%{name}/%{name}-%{upstream_version}.tar.gz
 
 BuildArch:	noarch
 
