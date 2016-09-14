@@ -1,13 +1,18 @@
+%global milestone .0b3
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 Name:		instack-undercloud
-Version:	XXX
-Release:	XXX
+Version:	5.0.0
+Release:	0.1%{?milestone}%{?dist}
 Summary:	Installation tools to install an undercloud via instack
 
 Group:		Development/Languages
 License:	ASL 2.0
 Url:		https://github.com/openstack/instack-undercloud
 Source0:	https://tarballs.openstack.org/%{name}/%{name}-%{upstream_version}.tar.gz
+
+#
+# patches_base=5.0.0.0b3
+#
 
 BuildArch:	noarch
 
@@ -58,3 +63,6 @@ installation.
 %{python2_sitelib}/instack_undercloud*
 
 %changelog
+* Wed Sep 14 2016 Haikel Guemar <hguemar@fedoraproject.org> 5.0.0-0.1
+- Update to 5.0.0.0b3
+
