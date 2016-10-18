@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7adec928_c1912454",
+        "filename": "instack-undercloud.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 85
+      },
+      "writtenOn": "2016-10-18T18:21:49Z",
+      "side": 1,
+      "message": "rc3",
+      "range": {
+        "startLine": 66,
+        "startChar": 68,
+        "endLine": 66,
+        "endChar": 71
+      },
+      "revId": "68cb5496ed15ccd15903adf5ae69cfa9c6fea186",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
