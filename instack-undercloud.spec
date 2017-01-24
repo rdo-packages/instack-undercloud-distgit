@@ -58,3 +58,4 @@ installation.
 %{python2_sitelib}/instack_undercloud*
 
 %changelog
+# REMOVEME: error caused by commit http://git.openstack.org/cgit/openstack/instack-undercloud/commit/?id=8ba565cb21fb76bd6fdc8f3d3a032e5011bd9a74
