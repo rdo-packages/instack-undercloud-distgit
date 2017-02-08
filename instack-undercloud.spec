@@ -55,5 +55,6 @@ installation.
 %{_datadir}/instack-undercloud
 %{_bindir}/instack-*
 %{python2_sitelib}/instack_undercloud*
+%exclude %{python2_sitelib}/instack_undercloud/tests
 
 %changelog
