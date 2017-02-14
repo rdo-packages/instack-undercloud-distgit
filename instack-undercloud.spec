@@ -16,7 +16,6 @@ BuildRequires:  python-pbr
 BuildRequires:  python-setuptools
 BuildRequires:  git
 Requires:	instack
-Requires:	openstack-tripleo
 Requires:	openstack-tripleo-heat-templates
 Requires:	openstack-tripleo-image-elements
 Requires:	redhat-lsb-core
