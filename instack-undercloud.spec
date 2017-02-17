@@ -23,13 +23,21 @@ Requires:	policycoreutils-python
 Requires:	openstack-heat-templates
 Requires:	openstack-tripleo-puppet-elements
 Requires:	python-psutil
+Requires:	python-oslo-config
 Requires:	pystache
 Requires:	jq
+Requires:	os-apply-config
 Requires:	os-net-config
 Requires:	os-cloud-config
+Requires:	os-refresh-config
 Requires:	python-heat-agent
 Requires:	puppet
 Requires:	openstack-puppet-modules
+Requires:	python-six
+Requires:	python-keystoneclient
+Requires:	python-mistralclient
+Requires:	python-novaclient
+Requires:	python-netaddr
 
 Requires:	selinux-policy
 
