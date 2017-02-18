@@ -20,7 +20,6 @@ Requires:	openstack-tripleo-heat-templates
 Requires:	openstack-tripleo-image-elements
 Requires:	redhat-lsb-core
 Requires:	policycoreutils-python
-Requires:	openstack-heat-templates
 Requires:	openstack-tripleo-puppet-elements
 Requires:	python-psutil
 Requires:	pystache
