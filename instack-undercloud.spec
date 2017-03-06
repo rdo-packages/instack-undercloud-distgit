@@ -1,8 +1,8 @@
-%global milestone .0rc1
+%global milestone .0rc2
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 Name:		instack-undercloud
 Version:	6.0.0
-Release:	0.1%{?milestone}%{?dist}
+Release:	0.2%{?milestone}%{?dist}
 Summary:	Installation tools to install an undercloud via instack
 
 Group:		Development/Languages
@@ -11,7 +11,7 @@ Url:		https://github.com/openstack/instack-undercloud
 Source0:	https://tarballs.openstack.org/%{name}/%{name}-%{upstream_version}.tar.gz
 
 #
-# patches_base=6.0.0.0rc1
+# patches_base=6.0.0.0rc2
 #
 
 BuildArch:	noarch
@@ -70,6 +70,9 @@ installation.
 %exclude %{python2_sitelib}/instack_undercloud/tests
 
 %changelog
+* Mon Mar 06 2017 Alfredo Moralejo <amoralej@redhat.com> 6.0.0-0.2.0rc2
+- Update to 6.0.0.0rc2
+
 * Fri Feb 17 2017 Alfredo Moralejo <amoralej@redhat.com> 6.0.0-0.1.0rc1
 - Update to 6.0.0.0rc1
 
