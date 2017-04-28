@@ -1,6 +1,6 @@
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 Name:		instack-undercloud
-Version:	6.0.0
+Version:	6.1.0
 Release:	1%{?dist}
 Summary:	Installation tools to install an undercloud via instack
 
@@ -65,6 +65,9 @@ installation.
 %exclude %{python2_sitelib}/instack_undercloud/tests
 
 %changelog
+* Fri Apr 28 2017 rdo-trunk <javier.pena@redhat.com> 6.1.0-1
+- Update to 6.1.0
+
 * Wed Mar 08 2017 Alfredo Moralejo <amoralej@redhat.com> 6.0.0-1
 - Update to 6.0.0
 
