@@ -36,6 +36,7 @@ Requires:	python-keystoneclient
 Requires:	python-mistralclient
 Requires:	python-novaclient
 Requires:	python-netaddr
+Requires:   python-netifaces
 
 Requires:	selinux-policy
 
