@@ -22,7 +22,7 @@ Requires:	redhat-lsb-core
 Requires:	policycoreutils-python
 Requires:	openstack-tripleo-puppet-elements
 Requires:	python-psutil
-Requires:	python-oslo-config
+Requires:	python-oslo-config >= 2:4.0.0
 Requires:	pystache
 Requires:	jq
 Requires:	os-apply-config
@@ -32,9 +32,11 @@ Requires:	python-heat-agent
 Requires:	puppet
 Requires:	openstack-puppet-modules
 Requires:	python-six
-Requires:	python-keystoneclient
-Requires:	python-mistralclient
-Requires:	python-novaclient
+Requires:	python-keystoneclient >= 3.8.0
+Requires:	python-ironicclient >= 1.14.0
+Requires:	python-mistralclient >= 3.1.0
+Requires:	python-novaclient >= 1:9.0.0
+Requires:	python-swiftclient >= 3.2.0
 Requires:	python-netaddr
 Requires:   python-netifaces
 
