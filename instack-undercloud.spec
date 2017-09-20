@@ -22,6 +22,7 @@ Requires:	redhat-lsb-core
 Requires:	policycoreutils-python
 Requires:	openstack-tripleo-puppet-elements
 Requires:	python-psutil
+Requires:	python-os-client-config
 Requires:	python-oslo-config >= 2:4.0.0
 Requires:	pystache
 Requires:	jq
