@@ -1,6 +1,6 @@
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 Name:		instack-undercloud
-Version:	7.4.6
+Version:	7.4.7
 Release:	1%{?dist}
 Summary:	Installation tools to install an undercloud via instack
 
@@ -67,6 +67,9 @@ installation.
 %exclude %{python2_sitelib}/instack_undercloud/tests
 
 %changelog
+* Mon Jan 08 2018 RDO <dev@lists.rdoproject.org> 7.4.7-1
+- Update to 7.4.7
+
 * Sat Dec 09 2017 RDO <dev@lists.rdoproject.org> 7.4.6-1
 - Update to 7.4.6
 
