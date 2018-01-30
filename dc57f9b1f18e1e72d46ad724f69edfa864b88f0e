@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "9aa53dc9_282c8faa",
+        "filename": "instack-undercloud.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 96
+      },
+      "writtenOn": "2018-01-30T17:23:49Z",
+      "side": 1,
+      "message": "let\u0027s call this \"containerized\" or \"container\" or \"deploy\". Anything other than \"docker\".",
+      "revId": "dc57f9b1f18e1e72d46ad724f69edfa864b88f0e",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9aa53dc9_c83ac3e7",
         "filename": "instack-undercloud.spec",
         "patchSetId": 2
@@ -19,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "9aa53dc9_682297bb",
+        "filename": "instack-undercloud.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 96
+      },
+      "writtenOn": "2018-01-30T17:23:49Z",
+      "side": 1,
+      "message": "oh i see you\u0027ve done a subpackage, sorry was looking at the old patchset still",
+      "parentUuid": "9aa53dc9_c83ac3e7",
+      "revId": "dc57f9b1f18e1e72d46ad724f69edfa864b88f0e",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9aa53dc9_a83f7fd5",
         "filename": "instack-undercloud.spec",
         "patchSetId": 2
@@ -30,6 +65,24 @@
       "writtenOn": "2018-01-30T17:16:38Z",
       "side": 1,
       "message": "python-tripleoclient requires instack-undercloud. What\u0027s the point of this here?\n\nhttps://review.rdoproject.org/r/gitweb?p\u003dopenstack/tripleoclient-distgit.git;a\u003dblob;f\u003dpython-tripleoclient.spec;#l41",
+      "revId": "dc57f9b1f18e1e72d46ad724f69edfa864b88f0e",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9aa53dc9_482fd3a1",
+        "filename": "instack-undercloud.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 96
+      },
+      "writtenOn": "2018-01-30T17:23:49Z",
+      "side": 1,
+      "message": "still, this seems kind of strange.\n\nwhat do you propose users are going to do? Right now they install tripleoclient, and they get i-u. Then they can run the installer.\n\nDo you propose to suggesting they install instack-undercloud-docker instead?",
+      "parentUuid": "9aa53dc9_a83f7fd5",
       "revId": "dc57f9b1f18e1e72d46ad724f69edfa864b88f0e",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
