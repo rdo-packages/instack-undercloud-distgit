@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9aa53dc9_68c73746",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 85
+      },
+      "writtenOn": "2018-01-30T14:27:59Z",
+      "side": 1,
+      "message": "Yes please, until containerized UC is the default, those new deps should be in the new subpackage.",
+      "revId": "9aeff06cafe048e11209ee94a857dc781b06c9ba",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
