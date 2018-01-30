@@ -138,6 +138,23 @@
       "revId": "dc57f9b1f18e1e72d46ad724f69edfa864b88f0e",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9aa53dc9_93962c93",
+        "filename": "instack-undercloud.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 62
+      },
+      "writtenOn": "2018-01-30T20:08:36Z",
+      "side": 1,
+      "message": "ok so I\u0027ll remove tripleoclient from here, and add instack-undercloud-container in tripleoclient deps.",
+      "revId": "dc57f9b1f18e1e72d46ad724f69edfa864b88f0e",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
     }
   ]
 }
