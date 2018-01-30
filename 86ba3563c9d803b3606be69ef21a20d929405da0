@@ -16,6 +16,24 @@
       "revId": "86ba3563c9d803b3606be69ef21a20d929405da0",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9aa53dc9_93f98ccb",
+        "filename": "instack-undercloud.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 62
+      },
+      "writtenOn": "2018-01-30T22:13:02Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9aa53dc9_13057cc1",
+      "revId": "86ba3563c9d803b3606be69ef21a20d929405da0",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
     }
   ]
 }
