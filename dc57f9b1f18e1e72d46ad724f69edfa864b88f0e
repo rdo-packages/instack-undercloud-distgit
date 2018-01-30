@@ -19,6 +19,23 @@
     },
     {
       "key": {
+        "uuid": "9aa53dc9_68097731",
+        "filename": "instack-undercloud.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 62
+      },
+      "writtenOn": "2018-01-30T18:15:24Z",
+      "side": 1,
+      "message": "ok i\u0027ll change it to \"container\"",
+      "revId": "dc57f9b1f18e1e72d46ad724f69edfa864b88f0e",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9aa53dc9_c83ac3e7",
         "filename": "instack-undercloud.spec",
         "patchSetId": 2
@@ -83,6 +100,23 @@
       "side": 1,
       "message": "still, this seems kind of strange.\n\nwhat do you propose users are going to do? Right now they install tripleoclient, and they get i-u. Then they can run the installer.\n\nDo you propose to suggesting they install instack-undercloud-docker instead?",
       "parentUuid": "9aa53dc9_a83f7fd5",
+      "revId": "dc57f9b1f18e1e72d46ad724f69edfa864b88f0e",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9aa53dc9_4806b321",
+        "filename": "instack-undercloud.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 62
+      },
+      "writtenOn": "2018-01-30T18:15:24Z",
+      "side": 1,
+      "message": "good questions indeed... I want to maintain the maximum of backward compatibility. So maybe create the subpackage in tripleoclient? python-tripleoclient-container ?\nWould that be ok?",
       "revId": "dc57f9b1f18e1e72d46ad724f69edfa864b88f0e",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
