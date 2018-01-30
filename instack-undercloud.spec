@@ -21,6 +21,7 @@ Requires:       openstack-tripleo-image-elements
 Requires:       redhat-lsb-core
 Requires:       policycoreutils-python
 Requires:       openstack-tripleo-puppet-elements
+Requires:       openstack-tripleo-common
 Requires:       python-psutil
 Requires:       python-os-client-config
 Requires:       python-oslo-config >= 2:4.0.0
@@ -38,10 +39,21 @@ Requires:       python-ironicclient >= 1.14.0
 Requires:       python-mistralclient >= 3.1.0
 Requires:       python-novaclient >= 1:9.0.0
 Requires:       python-swiftclient >= 3.2.0
+Requires:       python-tripleoclient
 Requires:       python-netaddr
 Requires:       python-netifaces
-
 Requires:       selinux-policy
+
+# Required for containerized undercloud
+Requires:       docker
+Requires:       docker-distribution
+Requires:       python-ipaddr
+Requires:       openvswitch
+Requires:       openstack-heat-api
+Requires:       openstack-heat-engine
+Requires:       openstack-heat-agents
+# required as we now use --heat-native
+Requires:       openstack-heat-monolith
 
 %description
 instack-undercloud is a collection of installation tools to install an
