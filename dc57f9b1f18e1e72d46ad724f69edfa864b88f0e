@@ -120,6 +120,24 @@
       "revId": "dc57f9b1f18e1e72d46ad724f69edfa864b88f0e",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9aa53dc9_13745c9a",
+        "filename": "instack-undercloud.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 96
+      },
+      "writtenOn": "2018-01-30T19:05:16Z",
+      "side": 1,
+      "message": "if you want backwards compatibility with our existing documentation, then python-tripleoclient should also install instack-undercloud-container.\n\nOtherwise, you will need to document 2 different methods on what package to initially install depending on which installation method you want.",
+      "parentUuid": "9aa53dc9_4806b321",
+      "revId": "dc57f9b1f18e1e72d46ad724f69edfa864b88f0e",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
     }
   ]
 }
