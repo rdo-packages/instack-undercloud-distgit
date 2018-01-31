@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9aa53dc9_2e9c9768",
+        "filename": "instack-undercloud.spec",
+        "patchSetId": 5
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 102
+      },
+      "writtenOn": "2018-01-31T13:52:19Z",
+      "side": 1,
+      "message": "Drop this requirement I think. If we still require this we\u0027ve done something wrong.",
+      "revId": "43e0eb01d10ca7a5d60eaf316ce5aadcbd3595e1",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
