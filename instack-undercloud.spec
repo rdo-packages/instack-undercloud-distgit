@@ -86,4 +86,6 @@ deploy a containerized undercloud.
 %{python2_sitelib}/instack_undercloud*
 %exclude %{python2_sitelib}/instack_undercloud/tests
 
+%files container
+
 %changelog
