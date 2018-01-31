@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9aa53dc9_39e4df39",
+        "filename": "instack-undercloud.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2018-01-31T18:36:21Z",
+      "side": 1,
+      "message": "You need to delete this line also.",
+      "range": {
+        "startLine": 70,
+        "startChar": 0,
+        "endLine": 70,
+        "endChar": 16
+      },
+      "revId": "d47b3840bd1404cf4da8130af0a2f14f3df61b25",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
