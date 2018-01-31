@@ -48,25 +48,6 @@ instack-undercloud is a collection of installation tools to install an
 undercloud via python-instack. It contains scripts and elements to complete the
 installation.
 
-%package container
-Summary:        Components required for a containerized undercloud
-
-# Required for containerized undercloud
-Requires:       instack-undercloud
-Requires:       openstack-tripleo-common
-Requires:       docker
-Requires:       docker-distribution
-Requires:       python-ipaddr
-Requires:       openvswitch
-Requires:       openstack-heat-api
-Requires:       openstack-heat-engine
-Requires:       openstack-heat-agents
-# required as we now use --heat-native
-Requires:       openstack-heat-monolith
-
-%description container
-instack-undercloud-container is a sub-package that contains all dependencies to
-deploy a containerized undercloud.
 
 %prep
 %autosetup -S git -n %{name}-%{upstream_version}
@@ -86,6 +67,5 @@ deploy a containerized undercloud.
 %{python2_sitelib}/instack_undercloud*
 %exclude %{python2_sitelib}/instack_undercloud/tests
 
-%files container
 
 %changelog
