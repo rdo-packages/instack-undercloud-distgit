@@ -12,8 +12,8 @@ Source0:        https://tarballs.openstack.org/%{name}/%{name}-%{upstream_versio
 BuildArch:      noarch
 
 BuildRequires:  python2-devel
-BuildRequires:  python2-pbr
-BuildRequires:  python2-setuptools
+BuildRequires:  python-pbr
+BuildRequires:  python-setuptools
 BuildRequires:  git
 Requires:       instack
 Requires:       openstack-tripleo-heat-templates
@@ -21,10 +21,9 @@ Requires:       openstack-tripleo-image-elements
 Requires:       redhat-lsb-core
 Requires:       policycoreutils-python
 Requires:       openstack-tripleo-puppet-elements
-Requires:       python2-psutil
-Requires:       python2-os-client-config
-Requires:       python2-oslo-config >= 2:5.1.0
-Requires:       python2-oslo-utils >= 3.33.0
+Requires:       python-psutil
+Requires:       python-os-client-config
+Requires:       python-oslo-config >= 2:4.0.0
 Requires:       pystache
 Requires:       jq
 Requires:       os-apply-config
@@ -33,13 +32,13 @@ Requires:       os-refresh-config
 Requires:       python-heat-agent
 Requires:       puppet
 Requires:       openstack-puppet-modules
-Requires:       python2-six
-Requires:       python2-keystoneclient >= 1:3.8.0
-Requires:       python2-ironicclient >= 2.2.0
-Requires:       python2-mistralclient >= 3.1.0
-Requires:       python2-novaclient >= 1:9.1.0
-Requires:       python2-swiftclient >= 3.2.0
-Requires:       python2-netaddr
+Requires:       python-six
+Requires:       python-keystoneclient >= 3.8.0
+Requires:       python-ironicclient >= 1.14.0
+Requires:       python-mistralclient >= 3.1.0
+Requires:       python-novaclient >= 1:9.0.0
+Requires:       python-swiftclient >= 3.2.0
+Requires:       python-netaddr
 Requires:       python-netifaces
 
 Requires:       selinux-policy
