@@ -31,7 +31,7 @@ Requires:       os-net-config
 Requires:       os-refresh-config
 Requires:       python-heat-agent
 Requires:       puppet
-Requires:       openstack-puppet-modules
+Requires:       puppet-tripleo
 Requires:       python-six
 Requires:       python-keystoneclient >= 3.8.0
 Requires:       python-ironicclient >= 1.14.0
