@@ -23,7 +23,7 @@ Requires:       policycoreutils-python
 Requires:       openstack-tripleo-puppet-elements
 Requires:       python2-psutil
 Requires:       python2-os-client-config
-Requires:       python2-oslo-config >= 2:5.1.0
+Requires:       python2-oslo-config >= 2:5.2.0
 Requires:       python2-oslo-utils >= 3.33.0
 Requires:       pystache
 Requires:       jq
@@ -35,7 +35,7 @@ Requires:       puppet
 Requires:       puppet-tripleo
 Requires:       python2-six
 Requires:       python2-keystoneclient >= 1:3.8.0
-Requires:       python2-ironicclient >= 2.2.0
+Requires:       python2-ironicclient >= 2.3.0
 Requires:       python2-mistralclient >= 3.1.0
 Requires:       python2-novaclient >= 1:9.1.0
 Requires:       python2-swiftclient >= 3.2.0
