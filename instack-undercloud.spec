@@ -1,6 +1,6 @@
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 Name:           instack-undercloud
-Version:        9.3.0
+Version:        9.4.0
 Release:        1%{?dist}
 Summary:        Installation tools to install an undercloud via instack
 
@@ -70,6 +70,9 @@ installation.
 
 
 %changelog
+* Tue Sep 25 2018 RDO <dev@lists.rdoproject.org> 9.4.0-1
+- Update to 9.4.0
+
 * Mon Aug 27 2018 RDO <dev@lists.rdoproject.org> 9.3.0-1
 - Update to 9.3.0
 
