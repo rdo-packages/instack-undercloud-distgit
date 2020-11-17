@@ -14,7 +14,7 @@ BuildArch:      noarch
 BuildRequires:  python2-devel
 BuildRequires:  python2-pbr
 BuildRequires:  python2-setuptools
-BuildRequires:  git
+BuildRequires:  git-core
 Requires:       instack
 Requires:       openstack-tripleo-heat-templates
 Requires:       openstack-tripleo-image-elements
